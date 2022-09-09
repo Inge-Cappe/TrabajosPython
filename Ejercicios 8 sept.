@@ -1,0 +1,58 @@
+# TrabajosPython
+Trabajos en Java.
+
+
+
+
+listamaterias=[]
+
+
+num_materias=int(input('ingrese la cantidad de materias: '))
+
+for i in range(num_materias):
+   materia=input('ingrese el nombre de la maetria'+str(i+1))
+   listamaterias.append(materia)
+print(listamaterias)
+
+
+notas=[]
+for i in range(len(listamaterias)):
+  nota=float(input("ingrese la nota que espera de "+listamaterias[i] + " "))
+  notas.append(nota)
+print(notas)
+
+
+paso=[]
+perdio=[]
+for i in range(len(listamaterias)):
+  if(notas[i]>3):
+    paso.append(listamaterias[i])
+  else:
+    perdio.append(listamaterias[i])
+ 
+
+print("las materias que paso fueron: "+str(paso) +" ")
+print("las materias que perdio fueron : "+str (perdio)+ " ")
+
+
+palabra= input("ingrese una palabra" + " ")
+if str(palabra) == str(palabra)[::-1] :
+    print("el texto o palabra ingresada = " +palabra+ " Es un Palindrome ")
+else:
+    print("El texto o palabra ingresada " +palabra+ " no es un Palindrome " )
+    
+    
+    
+    import math
+magnitudV1= int(input("ingrese la magnitud del primer vector: "))
+magnitudV2= int(input("ingrese la magnitud del segundo vector: " ))
+grado1= int(input("ingrese el grado del primer vector: "))
+grado2= int(input("ingrese el grado del segundo vector : "))
+if (grado1>grado2):
+   gradodif=(float(grado1))-(float(grado2)) 
+else:
+    gradodif=(float(grado2))-(float(grado1))
+
+magnitudtotal=(magnitudV1*magnitudV2)
+direccion=(math.cos(gradodif))
+ print("la magnitud escalar es :" +str(magnitudtotal)+"y su direcion es: " +str(direccion)+"grados")   
